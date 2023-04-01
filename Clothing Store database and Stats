@@ -1,0 +1,43 @@
+/**Clothing list:
+Shirts (17)
+Jeans (10)
+Shorts (24)
+Shoes (53)
+Hats (5)
+Underwears (15)
+Earrings (35)
+Scarfs (18)
+Backpacks (7)
+Rings (12)
+Socks (40)
+Gloves (13)
+Bras (21)
+Belts (8)
+Jackets (38)
+**/
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER);
+INSERT INTO clothing VALUES (1, "Shirts", 17, 15.85);
+INSERT INTO clothing VALUES (2, "Jeans", 10, 40.99);
+INSERT INTO clothing VALUES (3, "Shorts", 24, 15.89);
+INSERT INTO clothing VALUES (4, "Shoes", 53, 34.75);
+INSERT INTO clothing VALUES (5, "Hats", 5, 15);
+INSERT INTO clothing VALUES (6, "Underwears", 15, 4.95);
+INSERT INTO clothing VALUES (7, "Earrings", 35, 6.99);
+INSERT INTO clothing VALUES (8, "Scarfs",18, 13.95);
+INSERT INTO clothing VALUES (9, "Backpacks", 7, 20.99);
+INSERT INTO clothing VALUES (10, "Rings", 12, 6.95);
+INSERT INTO clothing VALUES (11, "Socks", 40, 2.99);
+INSERT INTO clothing VALUES (12, "Gloves", 13, 3.75);
+INSERT INTO clothing VALUES (13, "Bras", 21, 21);
+INSERT INTO clothing VALUES (14, "Belts", 8, 9.89);
+INSERT INTO clothing VALUES (15, "Jackets", 28, 25.99);
+
+--Complete Chart
+SELECT * FROM clothing;
+
+--Ordered by price
+SELECT * FROM clothing ORDER BY price;
+
+--Shows sum of each item
+SELECT name, (price*quantity) FROM clothing;
